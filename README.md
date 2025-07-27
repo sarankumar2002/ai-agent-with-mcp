@@ -15,8 +15,8 @@ graph TD;
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    A[AI Agent (adk)] --> B[MCP Toolbox];
+    B --> C[MySQL Database];
+    C-->B;
+    B-->A;
 ```
