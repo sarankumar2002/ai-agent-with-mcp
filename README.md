@@ -5,7 +5,11 @@ Google Gemini AI agent communicating with MCP server
 ## Architecture
 
 ```mermaid
-%%{config: {look: handDrawn}}%%
+---
+config:
+  look: handDrawn
+  theme: dark
+---
 graph TD;
     A(AI Agent - ADK UI) -->|Tool Calls| B(MCP Toolbox)
     A --> |Invoke| X(Google LLM)
