@@ -1,0 +1,53 @@
+sources:
+  mysql-source:
+    kind: mysql
+    host: 127.0.0.1
+    port: 3306
+    database: mcp_connect
+    user: root
+    password: root
+tools:
+  search-all-hotels:
+    kind: mysql-sql
+    source: mysql-source
+    description: Retrieve all hotels from the database.
+    statement: SELECT * FROM hotels;
+  search-hotels-by-name:
+    kind: mysql-sql
+    source: mysql-source
+    description: Search for hotels based on name.
+    statement: SELECT * FROM hotels where lower(name) like lower(concat('%', ?, '%'));
+    parameters:
+      - name: name
+        type: string
+        description: The name of the hotel.
+  search-hotels-by-location:
+    kind: mysql-sql
+    source: mysql-source
+    description: Search for hotels based on location.
+    parameters:
+      - name: location
+        type: string
+        description: |
+          The location of the hotel.
+    statement: select * FROM hotels WHERE location = ?;
+  book-hotel:
+    kind: mysql-sql
+    source: mysql-source
+    description: Book a hotel.
+    parameters:
+      - name: hotel_id
+        type: integer
+        description: The ID of the hotel to book.
+      - name: user_id
+        type: integer
+        description: The ID of the user booking the hotel.
+    statement: INSERT INTO bookings (hotel_id, user_id) VALUES (?, ?); 
+toolsets:
+  hotel-management:
+    - search-all-hotels
+    - search-hotels-by-name
+    - search-hotels-by-location
+    # - book-hotel
+    # - update-hotel
+    # - cancel-hotel
