@@ -1,6 +1,7 @@
-# Quick Sart with MCP
+# MCP Server Setup
 
-# Step 1: Set up your database
+
+## Step 1: Set up your database
 
 1. Setup my-sql database in your local
 ```sql
@@ -53,6 +54,6 @@ chmod +x toolbox
 
 4. Run the toolbox
 
-```cli
+```python
 ./toolbox --tools-file "tools.yaml"
 ```
