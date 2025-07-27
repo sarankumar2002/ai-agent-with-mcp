@@ -5,10 +5,18 @@ Google Gemini AI agent communicating with MCP server
 ## Architecture
 
 ```mermaid
-graph TD
+graph TD;
     A[AI Agent (ADK)] -->|Tool Calls| B(MCP Toolbox for Databases)
     B -->|Database Operations| C[MySQL Database]
     C -->|Results| B
     B -->|Responses| A
 
+```
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
