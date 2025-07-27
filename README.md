@@ -15,8 +15,8 @@ graph TD;
 
 ```mermaid
 graph TD;
-    A(AI Agent (adk)) --> B(MCP Toolbox);
-    B --> C(MySQL Database);
-    C-->B;
-    B-->A;
+    AI Agent (adk) -->|Tool Calls| MCP Toolbox;
+    MCP Toolbox -->|Database Operations| MySQL Database;
+    MySQL Database-->|Results| MCP Toolbox ;
+    MCP Toolbox -->|Responses|  AI Agent (adk) ;
 ```
