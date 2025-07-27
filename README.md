@@ -6,17 +6,9 @@ Google Gemini AI agent communicating with MCP server
 
 ```mermaid
 graph TD;
-    A(AI Agent) -->|Tool Calls| B(MCP Toolbox for Databases)
+    A(AI Agent - ADK UI) -->|Tool Calls| B(MCP Toolbox for Databases)
     B -->|Database Operations| C[MySQL Database]
     C -->|Results| B
     B -->|Responses| A
 
-```
-
-```mermaid
-graph TD;
-    AI Agent -->|Tool Calls| MCP Toolbox;
-    MCP Toolbox -->|Database Operations| MySQL Database;
-    MySQL Database-->|Results| MCP Toolbox ;
-    MCP Toolbox -->|Responses|  AI Agent ;
 ```
