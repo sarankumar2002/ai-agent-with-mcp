@@ -2,12 +2,12 @@
 
 # Step 1: Set up your database
 
-## Setup my-sql database in your local
+1. Setup my-sql database in your local
 ```sql
 CREATE DATABASE mcp-connect
 ```
 
-## create table in mysql DB
+2. create table
 ```sql
 CREATE TABLE hotels (
   id            INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -21,7 +21,7 @@ CREATE TABLE hotels (
 ```
 
 
-## insert query
+3. Insert data into the table
 ```sql
 INSERT INTO hotels(id, name, location, price_tier, checkin_date, checkout_date, booked)
 VALUES
@@ -37,7 +37,7 @@ VALUES
   (10, 'Comfort Inn Bern', 'Bern', 'Midscale', '2024-04-04', '2024-04-16', FALSE);
 ```
 
-Step 2: Install and Configure MCP Toolbox
+## Step 2: Install and Configure MCP Toolbox
 
 1. Download latest version of toolbox binary
 ```python
@@ -53,6 +53,6 @@ chmod +x toolbox
 
 4. Run the toolbox
 
-```python
+```cli
 ./toolbox --tools-file "tools.yaml"
 ```
