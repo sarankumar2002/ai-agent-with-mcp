@@ -7,8 +7,8 @@ Google Gemini AI agent communicating with MCP server
 ```mermaid
 ---
 config:
-  look: handDrawn
-  theme: dark
+  look: neo
+  theme: default
 ---
 graph TD;
     A(AI Agent - ADK UI) -->|Tool Calls| B(MCP Toolbox)
